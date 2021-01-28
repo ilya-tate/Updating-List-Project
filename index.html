@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Updating List</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Ilya Tate">
+    <meta name="description" content="Updaing List Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="generateRandomUser(3)">
+    <div class="form">
+        <legend>* is a REQUIRED field</legend>
+        <ul style="list-style-type: none;">
+            <li>
+                <label for="nameFirst">* First Name</label>
+                <input type="text" id="nameFirst" class="required" name="name-first">
+            </li>
+            <br>
+
+            <li>
+                <label for="nameLast">* Last Name</label>
+                <input type="text" id="nameLast" class="required" name="name-last" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="dob">* Date of Birth</label>
+                <input type="date" id="dob" name="dob" class="required" placeholder="dd-mm-yyyy" min="1920-01-01" max="2020-12-31" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="cityDepart">* Departing City</label>
+                <input type="text" id="cityDepart" class="required" name="city-departure" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="cityDestin">* Destination City</label>
+                <input type="text" id="cityDestin" class="required" name="city-destination" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="dateLeave">* Date Leaving</label>
+                <input type="date" id="dateLeave" class="required" name="date-leave" placeholder="dd-mm-yyyy" min="2020-01-01" max="3000-12-31" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="dateReturn">* Date Returning</label>
+                <input type="date" id="dateReturn" class="required" name="date-return" placeholder="dd-mm-yyyy" min="2020-01-01" max="3000-12-31" required>
+            </li>
+            <br>
+
+            <li>
+                <label for="bagNum">Number of Bags Brought</label>
+                <input type="number" id="bagNum" name="bags-number" value="0" min="0">
+            </li>
+            <br>
+
+            <li>
+                <p>Type of Meal</p>
+                <input type="radio" id="meal.chicken" name="meal" value="chicken">
+                <label for="meal.chicken">Chicken</label>
+                <input type="radio" id="meal.fish" name="meal" value="fish">
+                <label for="meal.fish">Fish</label>
+                <input type="radio" id="meal.vege" name="meal" value="vegetarian">
+                <label for="meal.vege">Vegetarian</label>
+            </li>
+            <br>
+
+            <li>
+                <p>Extras</p>
+                <input type="checkbox" id="extras.legroom" name="extras" value="legroom">
+                <label for="extras.legroom">Legroom</label>
+                <input type="checkbox" id="extras.window" name="extras" value="window">
+                <label for="extras.window">Window Seat</label>
+                <input type="checkbox" id="extras.headphones" name="extras" value="headphones">
+                <label for="extras.headphones">Headphones</label>
+                <input type="checkbox" id="extras.food" name="extras" value="food">
+                <label for="extras.food">Extra Food</label>
+            </li>
+            <br>
+
+            <li>
+                <button onclick="submit()">Submit</button>
+            </li>
+        </ul>
+    </div class="form">
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="search-area">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="First Last or ID">
+            <button onclick="search()">Search</button>
+        </div>
+        <div id="output">ID:<br>First Name:<br>Last Name:<br>Date of Birth:<br>Departing City:<br>Destination City:<br>Departing Date:<br>Returning Date:<br>Number of Bags:<br>Meal:<br>Extra Options:<br>Is Over 21:<br>Extra Costs:<br>Amount of Time Gone:</div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
